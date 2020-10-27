@@ -1,5 +1,5 @@
-image: alpine
+image: ubuntu
 
 hello-test:
     script: 
-        - $ echo The value of variable x is 10
+        - $ echo Hello World
