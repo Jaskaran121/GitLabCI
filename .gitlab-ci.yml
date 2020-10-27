@@ -1,5 +1,2 @@
-image: ubuntu
-
-hello-test:
-    script: 
-        - $ echo Hello World
+hello world:
+  script: echo "Hello World"
