@@ -1,2 +1,7 @@
-hello world:
-  script: echo Hello World GitLab
+stages:
+    - test
+
+test:
+    stage: test
+    script:
+        - echo "Success!"
