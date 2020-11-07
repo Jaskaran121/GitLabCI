@@ -1,7 +1,25 @@
 stages:
+    - build
     - test
 
-test:
+build:
+    stage: build
+    image: mcr.microsoft.com/dotnet/core/sdk:2.2
+    before_script:
+        - echo "Run pre-conditions here................."
+    script:
+        -  echo "Getting sdk info......."
+        - "dotnet --info"
+
+test1:
     stage: test
     script:
-        - echo "Success!"
+        - ls
+        - echo "Testing if your merge request branch is in par with the base branch"
+    only:
+        - merge_requests
+
+test2:
+    stage: test
+    script:
+        - echo "Testing if your target branch is developer"
